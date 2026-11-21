@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#155eef" />
+  <title>BE (Better Education) — Student Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loginView" class="login-screen">
+    <div class="login-card">
+      <div class="brand-mark">B</div>
+      <p class="eyebrow">YOUR SCHOOL, CONNECTED</p>
+      <h1>Welcome to <span>BE</span></h1>
+      <p class="muted">A simple space to learn, track progress and stay organised.</p>
+      <form id="loginForm">
+        <label>Student name<input id="studentName" value="Alex Morgan" required /></label>
+        <label>School email<input id="studentEmail" type="email" value="alex@student.edu" required /></label>
+        <label>Password<input id="studentPassword" type="password" value="student123" required /></label>
+        <button class="primary full" type="submit">Sign in <span>→</span></button>
+      </form>
+      <p class="login-hint">Demo access: enter any name, email and password.</p>
+    </div>
+    <div class="login-decoration"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="deco-copy"><span>LEARN</span><span>GROW</span><span>ACHIEVE</span></div></div>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard"><span class="brand-mark small">B</span><span>BE<span class="brand-light"> Education</span></span></a>
+      <div class="school-label">STUDENT WORKSPACE</div>
+      <nav id="mainNav">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Overview</button>
+        <button class="nav-item" data-page="courses"><span>▤</span> My courses</button>
+        <button class="nav-item" data-page="assignments"><span>✓</span> Assignments <i id="assignmentBadge">3</i></button>
+        <button class="nav-item" data-page="grades"><span>▥</span> Grades</button>
+        <button class="nav-item" data-page="schedule"><span>▦</span> Schedule</button>
+        <button class="nav-item" data-page="messages"><span>✉</span> Messages <i>2</i></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><b>Learning tip</b><p>Small, consistent steps make a big difference.</p><button id="tipButton">Get a tip →</button></div><button class="nav-item" id="logoutButton"><span>↪</span> Log out</button></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menuButton">☰</button><div class="breadcrumb">Workspace <span>/</span> <b id="pageCrumb">Overview</b></div><div class="top-actions"><button class="icon-button" id="notificationButton" title="Notifications">♧<em></em></button><div class="profile-mini"><div class="avatar" id="avatarInitials">AM</div><div><b id="headerName">Alex Morgan</b><small>Student</small></div><button id="profileMenu">⌄</button></div></div></header>
+      <section class="page-wrap" id="pageContent"></section>
+      <footer>© 2026 BE — Better Education <span>Learning made clearer.</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
